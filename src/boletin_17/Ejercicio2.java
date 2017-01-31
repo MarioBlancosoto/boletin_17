@@ -15,6 +15,7 @@ public class Ejercicio2 {
    
    
    public String pedirNombre(){
+      
   return JOptionPane.showInputDialog("Introduce el nombre");
 }
 public int pedirNota(){
@@ -67,12 +68,12 @@ public void visualizarMedia(){
 
 public void notaMayor(){
    int notaMayor = notas[0];
-   int pos =0;
+ 
     for(int i=0;i<notas.length;i++){
         
     if(notas[i]>notaMayor){
         notaMayor =notas[i];
-     pos =i;
+    
      
      System.out.println("La mayor nota es "+notaMayor);
     }
@@ -81,12 +82,16 @@ public void notaMayor(){
     }
    
 }
-public void visualizarAlumnos(){
-    for(Alumno al:alumnos){
-        System.out.println(Arrays.toString(alumnos));
+public void visualizarAlumnosAprobados(){
+    for(Alumno alum:alumnos){
+        if(pedirNota()>=5){
+            System.out.println(pedirNombre()+"Está aprobado");
+            
+        }else if(pedirNota()<5){
+        System.out.println(pedirNombre()+"Está suspenso");
     }
 }
-
+}
 }     
             
 
