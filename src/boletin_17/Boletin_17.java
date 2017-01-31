@@ -15,10 +15,13 @@ public class Boletin_17 {
       //obj.aprobadosSuspensos();
      // obj.visualizarMedia();
       //obj.deMayorAmenor();
-     obj.cargarArray();
+    // obj.cargarArray();
      //obj.cargarArray2();
       //obj.visualizarAlumnosAprobados();
-     obj.notaMayor();
+     //obj.notaMayor();
+     LetraNif letra = new LetraNif();
+     letra.cargarArray();
+     letra.calculaResto();
         
     }
     
