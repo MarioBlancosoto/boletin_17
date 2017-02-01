@@ -8,49 +8,41 @@ import javax.swing.JOptionPane;
 
 
 public class Ejercicio2 {
-  Alumno alumnos [] = new Alumno[4];
+   String nomes []= new String[4];
    int notas[]= new int[4];
-  Alumno [] alu ={ new Alumno(8,"Jorge"),new  Alumno(5,"Jesus")};
+ 
    
    
    
    public String pedirNombre(){
       
-  return JOptionPane.showInputDialog("Introduce el nombre");
+  String nome = JOptionPane.showInputDialog("Introduce el nombre");
+  return nome;
 }
 public int pedirNota(){
     
-  return Integer.parseInt(JOptionPane.showInputDialog("Introduce la nota"));    
-
+  int nota = Integer.parseInt(JOptionPane.showInputDialog("Introduce la nota"));    
+return nota;
     } 
     
     public void cargarArray(){
       
-        Random rm = new Random();
-        for(int i=0;i<notas.length;i++){
-        notas[i] = rm.nextInt(10);
-        System.out.println(notas[i]);
-        }
-    }
-    public void cargarArray2(){
+     
         
-        for(int i=0;i<alumnos.length;i++){
-            
-            alumnos[i] = new Alumno(pedirNota(),pedirNombre());
+        for(int i=0;i<notas.length;i++){
+           notas[i] = pedirNota();
+           nomes[i] = pedirNombre();
         }
         
     }
       public void aprobadosSuspensos(){
           int aprobados=0;
-          int suspensos =0;
+          int suspensos=0;
           for(int i=0;i<notas.length;i++){
               
               if(notas[i]>5){
-                  aprobados++;
-                  System.out.println(notas[i]+"----->"+ " Aprobado ");
-                  
-              }else
-                  System.out.println(notas[i]+"----->"+ " Suspenso ");
+                  aprobados++;       
+              }else       
               suspensos++;
           }
           System.out.println(" O numero total de aprobados e "+aprobados
@@ -78,16 +70,39 @@ public void notaMayor(){
     }
    System.out.println("La mayor nota es "+notaMayor);
 }
-public void visualizarAlumnosAprobados(){
-    for(Alumno alum:alumnos){
-        if(pedirNota()>=5){
-            System.out.println(pedirNombre()+"Está aprobado");
+public void visualizarAlumnoAprobado(){
+    
+    for(int i=0;i<notas.length;i++){
+        if(notas[i]>=5){
+            System.out.println("O alumno "+nomes[i]+" ten a nota "+notas+" Está aprobado ");
             
-        }else if(pedirNota()<5){
-        System.out.println(pedirNombre()+"Está suspenso");
+        }else if(notas[i]<5){
+        System.out.println(" O alumno "+nomes[i]+" e ten a nota "+notas[i]+" Está suspenso ");
     }
 }
 }
+
+public void menorAmaior(){
+    Arrays.sort(notas);
+    for(int i=0;i<notas.length;i++){
+        System.out.println(notas[i]);
+    }
+    
+}
+
+public void atoparAlumno(){
+    
+    boolean atopado = false;
+    String encontrar = JOptionPane.showInputDialog("Elixe o nome do alumno");
+    for(int i=0;i<nomes.length;i++){
+    if(encontrar.equals(nomes[i])){
+        atopado = true;
+        System.out.println("O nome  do alumno e " + nomes+"E a sua nota e "+notas);
+    }else{
+        System.out.println("O alumno non está ");
+    }
+      
+}
 }     
-            
+}           
 

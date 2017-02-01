@@ -10,7 +10,7 @@ public class Ejercicio_1 {
     
     
     
-    public void cargarArray(){
+    public void cargarArrayNumeros(){
         Random rm = new Random();
        
         for(int i=0;i<numeros.length;i++){
