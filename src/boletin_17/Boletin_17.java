@@ -20,8 +20,7 @@ public class Boletin_17 {
       //obj.visualizarAlumnosAprobados();
      //obj.notaMayor();
      LetraNif letra = new LetraNif();
-     letra.cargarArray();
-     letra.calculaResto();
+    letra.metodoNif();
         
     }
     

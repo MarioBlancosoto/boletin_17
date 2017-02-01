@@ -73,14 +73,10 @@ public void notaMayor(){
         
     if(notas[i]>notaMayor){
         notaMayor =notas[i];
-    
-     
-     System.out.println("La mayor nota es "+notaMayor);
+        
     }
-  
-    
     }
-   
+   System.out.println("La mayor nota es "+notaMayor);
 }
 public void visualizarAlumnosAprobados(){
     for(Alumno alum:alumnos){
