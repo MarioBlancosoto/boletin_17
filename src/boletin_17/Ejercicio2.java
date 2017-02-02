@@ -83,9 +83,20 @@ public void visualizarAlumnoAprobado(){
 }
 
 public void menorAmaior(){
-    Arrays.sort(notas);
-    for(int i=0;i<notas.length;i++){
-        System.out.println(notas[i]);
+   
+    Alumno[] alu = new Alumno[4];
+/*corregido,se crea array de objetos incluyendo los otros dos arrays 
+para poder comparar nombre y notas
+*/
+   for(int i=0;i<alu.length;i++){
+     Alumno a = new Alumno();
+     a.setNotas(notas[i]);
+     a.setNome(nomes[i]);
+     alu[i]=a; // guardamos objeto tipo alumno con nombre "A" dentro de alu.
+   }
+    Arrays.sort(alu);
+    for(int i=0;i<alu.length;i++){
+        System.out.println(alu[i]);
     }
     
 }

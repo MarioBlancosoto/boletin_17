@@ -2,7 +2,7 @@
 package boletin_17;
 
 
-public class Alumno {
+public class Alumno implements Comparable<Alumno>  {
     int notas;
     String nome;
     
@@ -36,6 +36,11 @@ public class Alumno {
         return "Alumno{" + "notas=" + notas + ", nome=" + nome + '}';
     }
     
-    
+    @Override
+    public int compareTo(Alumno comparar){
+      int comparaNota = comparar.getNotas();
+      return this.notas - comparaNota;
+        
+    }
    
 }

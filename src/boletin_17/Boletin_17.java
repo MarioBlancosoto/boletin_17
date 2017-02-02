@@ -13,10 +13,11 @@ public class Boletin_17 {
      // obx.cargarArrayNumeros();
      // obx.visualizarAlreves();
       obj.cargarArray();
-      obj.notaMayor();
-      obj.visualizarAlumnoAprobado();
-      obj.visualizarMedia();
-      obj.atoparAlumno();
+      //obj.notaMayor();
+      //obj.visualizarAlumnoAprobado();
+      //obj.visualizarMedia();
+      //obj.atoparAlumno();
+      obj.menorAmaior();
     }
     
 }
