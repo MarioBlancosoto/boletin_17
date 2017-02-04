@@ -107,10 +107,13 @@ public void atoparAlumno(){
     String encontrar = JOptionPane.showInputDialog("Elixe o nome do alumno");
     for(int i=0;i<nomes.length;i++){
     if(encontrar.equals(nomes[i])){
+        
+        System.out.println("O nome  do alumno e " + nomes[i]+" E a sua nota e "+notas[i]);
         atopado = true;
-        System.out.println("O nome  do alumno e " + nomes+"E a sua nota e "+notas);
-    }else{
-        System.out.println("O alumno non está ");
+        break;
+    }
+    else{
+        System.out.println(" O alumno non está ");
     }
       
 }

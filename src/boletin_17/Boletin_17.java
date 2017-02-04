@@ -16,8 +16,8 @@ public class Boletin_17 {
       //obj.notaMayor();
       //obj.visualizarAlumnoAprobado();
       //obj.visualizarMedia();
-      //obj.atoparAlumno();
-      obj.menorAmaior();
+      obj.atoparAlumno();
+        //obj.menorAmaior();
     }
     
 }
