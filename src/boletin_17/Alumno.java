@@ -5,7 +5,7 @@ package boletin_17;
 public class Alumno implements Comparable<Alumno>  {
     int notas;
     String nome;
-    
+    String braiswey;
     public Alumno(){
         
     }
